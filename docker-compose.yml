@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  go:
+    image: golang:alpine
+    container_name: go
+    volumes:
+      - .:/var/www/app
+    networks:
+      - local
+
+networks:
+  local:
+    driver: bridge
